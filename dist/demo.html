@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<title>Badge demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./Badge.umd.js"></script>
+
+<link rel="stylesheet" href="./Badge.css">
+
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: Badge
+  }
+}).$mount('#app')
+</script>
