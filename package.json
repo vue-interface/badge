@@ -37,7 +37,6 @@
   "homepage": "https://github.com/vue-interface/alert/docs#readme",
   "dependencies": {
     "@vue-interface/variant": "^1.0.12",
-    "color": "^3.1.2",
     "core-js": "^3.6.4",
     "tailwindcss": "^1.6.0",
     "vue": "^2.6.11"

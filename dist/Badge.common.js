@@ -1446,7 +1446,7 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: ./src/css/Badge.css
 var Badge = __webpack_require__("37a0");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"00c7ea40-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Badge.vue?vue&type=template&id=2927052c&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"12baaf2a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Badge.vue?vue&type=template&id=2927052c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.component || _vm.type,{tag:"component",staticClass:"badge",class:_vm.classes,attrs:{"href":_vm.href}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
