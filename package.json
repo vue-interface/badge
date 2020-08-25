@@ -32,9 +32,9 @@
   "author": "Justin Kimbrell",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vue-interface/alert/issues"
+    "url": "https://github.com/vue-interface/badge/issues"
   },
-  "homepage": "https://github.com/vue-interface/alert/docs#readme",
+  "homepage": "https://github.com/vue-interface/badge/docs#readme",
   "dependencies": {
     "@vue-interface/variant": "^1.0.12",
     "core-js": "^3.6.4",
