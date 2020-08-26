@@ -1,5 +1,10 @@
 <template>
-    <component :is="component || type" :href="href" class="badge" :class="classes">
+    <component
+        :is="component || type"
+        :href="href"
+        :to="to"
+        class="badge"
+        :class="classes">
         <slot />
     </component>
 </template>
