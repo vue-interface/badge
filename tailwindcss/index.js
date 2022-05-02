@@ -3,17 +3,17 @@ const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = plugin(function({ addComponents, theme }) {
     const badge = {
-        ':root': {
-            '--badge-font-size': theme('badge.fontSize'),
-            '--badge-font-weight': theme('badge.fontWeight'),
-            '--badge-color': theme('badge.color'),
-            '--badge-padding-y': theme('badge.paddingY'),
-            '--badge-padding-x': theme('badge.paddingX'),
-            '--badge-border-radius': theme('badge.borderRadius')
-        },
+        // ':root': {
+        //     '--badge-font-size': theme('badge.fontSize'),
+        //     '--badge-font-weight': theme('badge.fontWeight'),
+        //     '--badge-color': theme('badge.color'),
+        //     '--badge-padding-y': theme('badge.paddingY'),
+        //     '--badge-padding-x': theme('badge.paddingX'),
+        //     '--badge-border-radius': theme('badge.borderRadius')
+        // },
         
         '.badge': {
-            display: 'inline-block',
+            display: theme('badge.display'),
             padding: `${theme('badge.paddingY')} ${theme('badge.paddingX')}`,
             fontSize: theme('badge.fontSize'),
             fontWeight: theme('badge.fontWeight'),
@@ -23,6 +23,10 @@ module.exports = plugin(function({ addComponents, theme }) {
             whiteSpace: 'nowrap',
             verticalAlign: 'baseline',
             borderRadius: theme('badge.borderRadius'),
+        },
+
+        '.badge-pill': {
+            borderRadius: '1000rem'
         },
         
         '.badge:empty': {
@@ -40,6 +44,7 @@ module.exports = plugin(function({ addComponents, theme }) {
 }, {
     theme: {
         badge: theme => ({
+            display: 'inline-block',
             fontSize: '.75em',
             fontWeight: 'bold',
             color: theme('colors.white'),

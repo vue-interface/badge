@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Variant from '@vue-interface/variant';
+import { Variant } from '@vue-interface/variant';
 
 export default {
 
@@ -42,13 +42,6 @@ export default {
          * @property {Boolean}
          */
         pill: Boolean,
-
-        /**
-         * The badge appear as secondary in size to the parent element.
-         *
-         * @property {Boolean}
-         */
-        secondary: Boolean,
         
         /**
          * The to route. If used, badge will be a router-link component.
@@ -56,6 +49,16 @@ export default {
          * @property {Object|String}
          */
         to: [Object, String],
+        
+        /**
+         * The variant name.
+         *
+         * @param {String}
+         */
+        variant: {
+            type: String,
+            default: 'primary'
+        }
     },
 
     computed: {
@@ -86,10 +89,3 @@ export default {
     }
 };
 </script>
-
-<style>
-a.badge:hover {
-    color: white;
-    text-decoration: none;
-}
-</style>

@@ -4,32 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Badge</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap-grid.min.css">
-        <link rel="stylesheet" href="./dist/Badge.css">
     </head>
     <body>
-        <div id="app" class="container">
-            
-            <h3 class="mt-4">Basic Usage</h3>
+        <div id="app" class="container mx-auto">
+            <h1 class="text-4xl mb-5">badge</h1>
 
             <badge>Some Label</badge><br>
 
-            <hr>
+            <hr class="my-3">
 
-            <h3>Pill Shaped</h3>
+            <h3 class="text-2xl mb-3">Pill Shaped</h3>
 
             <badge pill>Some Label</badge>
 
-            <hr>
+            <hr class="my-3">
 
-            <h3>Anchors</h3>
+            <h3 class="text-2xl mb-3">Anchors</h3>
 
             <badge href="http://google.com">Redirect to Google</badge>
 
-            <hr>
+            <hr class="my-3">
 
-            <h3>Variants</h3>
+            <h3 class="text-2xl mb-3">Variants</h3>
 
             <badge variant="primary">Primary</badge><br>
             <badge variant="secondary">Secondary</badge><br>
@@ -41,19 +37,36 @@
             <badge variant="muted">Muted</badge><br>
             <badge variant="light">Light</badge><br>
 
-            <hr>
+            <hr class="my-3">
 
-            <h1>Some Header Value <badge>1</badge></h1>
-            <h2>Some Header Value <badge>1</badge></h2>
-            <h3>Some Header Value <badge>1</badge></h3>
-            <h4>Some Header Value <badge>1</badge></h4>
-            <h5>Some Header Value <badge>1</badge></h5>
-            <h6>Some Header Value <badge>1</badge></h6>
+            <h3 class="text-2xl mb-3">Colors</h3>
+
+            <badge variant="red-50">red-50</badge><br>
+            <badge variant="red-100">red-100</badge><br>
+            <badge variant="red-200">red-200</badge><br>
+            <badge variant="red-300">red-300</badge><br>
+            <badge variant="red-400">red-400</badge><br>
+            <badge variant="red-500">red-500</badge><br>
+            <badge variant="red-600">red-600</badge><br>
+            <badge variant="red-700">red-700</badge><br>
+            <badge variant="red-800">red-800</badge><br>
+            <badge variant="red-900">red-900</badge><br>
+
+            <hr class="my-3">
+
+            <h1 class="text-6xl">Some Header Value <badge secondary>1</badge></h1>
+            <h2 class="text-5xl">Some Header Value <badge>1</badge></h2>
+            <h3 class="text-4xl">Some Header Value <badge>1</badge></h3>
+            <h4 class="text-3xl">Some Header Value <badge>1</badge></h4>
+            <h5 class="text-2xl">Some Header Value <badge>1</badge></h5>
+            <h6 class="text-xl">Some Header Value <badge>1</badge></h6>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.js"></script>
-        <script type="text/javascript" src="./dist/Badge.umd.js"></script>
-        <script type="text/javascript">
+        <script type="module">
+            import './index.css';
+            import Vue from 'vue/dist/vue';
+            import { Badge } from './index.js';
+
             const vue = new Vue({
                 el: '#app',
                 components: {

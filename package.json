@@ -1,22 +1,25 @@
 {
   "name": "@vue-interface/badge",
   "version": "0.9.3",
-  "description": "Vue badge component",
-  "main": "index.js",
+  "description": "A Vue badge component.",
+  "files": [
+    "index.js",
+    "dist",
+    "src",
+    "tailwindcss"
+  ],
+  "main": "./dist/badge.umd.js",
+  "module": "./index.js",
+  "browserslist": "last 2 versions, > 0.5%, ie >= 11",
   "scripts": {
-    "watch": "npm run serve",
-    "serve": "vue-cli-service build --target lib --name=Badge ./main.vue --watch",
-    "build": "vue-cli-service build --target lib --name=Badge ./main.vue",
-    "lint": "vue-cli-service lint",
-    "fix": "vue-cli-service lint --fix",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "pre-release": "npm run build; git add . -A; git commit -m 'pre-release commit'",
     "release-patch": "npm run pre-release && npm version patch -m \"%s\" && npm run release;",
     "release-minor": "npm run pre-release && npm version minor -m \"%s\" && npm run release;",
     "release-major": "npm run pre-release && npm version major -m \"%s\" && npm run release;",
-    "release": "git add . -A; git commit; git push --tags origin; npm publish;",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "./node_modules/.bin/vuepress dev docs",
-    "docs:build": "./node_modules/.bin/vuepress build docs"
+    "release": "git add . -A; git commit; git push --tags origin; npm publish;"
   },
   "repository": {
     "type": "git",
@@ -36,23 +39,22 @@
   },
   "homepage": "https://github.com/vue-interface/badge/docs#readme",
   "dependencies": {
-    "@vue-interface/variant": "^1.0.12",
-    "core-js": "^3.6.4",
-    "tailwindcss": "^1.6.0",
-    "vue": "^2.6.11"
+    "@vue-interface/variant": "^1.2.1",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0",
-    "@vue/cli-plugin-eslint": "^4.0",
-    "@vue/cli-service": "^4.0",
-    "@vuepress/plugin-register-components": "^1.5.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "autoprefixer": "^10.4.2",
     "babel-eslint": "^10.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "change-case": "^4.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "markdown-it-meta": "0.0.1",
-    "postcss-cli": "^7.1.1",
-    "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.5.0",
-    "vuepress-plugin-template-constants": "^0.2.1"
+    "pascalcase": "^2.0.0",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.0",
+    "vite": "^2.7.2",
+    "vite-plugin-vue2": "^1.9.3",
+    "vue-router": "^3.5.3"
   }
 }
