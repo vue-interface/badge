@@ -3,14 +3,21 @@ module.exports = {
         "./index.html"
     ],
     theme: {
-        extend: {},
+        extend: {
+            variations: {
+                future: '#FF00FF'
+            }
+        },
     },
     plugins: [
         require('@vue-interface/variant/tailwindcss'),
         require('./tailwindcss'),
     ],
     safelist: [
-        ...require('@vue-interface/variant/tailwindcss/safelist')(),
-        ...require('./tailwindcss/safelist')()
+        ...require('@vue-interface/variant/tailwindcss/safelist')('red'),
+        ...require('./tailwindcss/safelist')(),
+        {
+            pattern: /future/
+        }
     ]
 };

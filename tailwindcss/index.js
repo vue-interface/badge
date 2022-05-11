@@ -2,16 +2,7 @@ const plugin = require('tailwindcss/plugin');
 const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = plugin(function({ addComponents, theme }) {
-    const badge = {
-        // ':root': {
-        //     '--badge-font-size': theme('badge.fontSize'),
-        //     '--badge-font-weight': theme('badge.fontWeight'),
-        //     '--badge-color': theme('badge.color'),
-        //     '--badge-padding-y': theme('badge.paddingY'),
-        //     '--badge-padding-x': theme('badge.paddingX'),
-        //     '--badge-border-radius': theme('badge.borderRadius')
-        // },
-        
+    addComponents({
         '.badge': {
             display: theme('badge.display'),
             padding: `${theme('badge.paddingY')} ${theme('badge.paddingX')}`,
@@ -24,13 +15,13 @@ module.exports = plugin(function({ addComponents, theme }) {
             verticalAlign: 'baseline',
             borderRadius: theme('badge.borderRadius'),
         },
-
-        '.badge-pill': {
-            borderRadius: '1000rem'
-        },
         
         '.badge:empty': {
             display: 'none'
+        },
+
+        '.badge-pill': {
+            borderRadius: '1000rem'
         },
 
         // Quick fix for badges in buttons
@@ -38,9 +29,7 @@ module.exports = plugin(function({ addComponents, theme }) {
             position: 'relative',
             top: '-1px'
         }
-    };
-
-    addComponents(badge);
+    });
 }, {
     theme: {
         badge: theme => ({

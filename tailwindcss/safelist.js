@@ -1,4 +1,5 @@
-module.exports = () => ([
-    'badge',
-    'badge-pill'
-]);
+module.exports = function safelist() {
+    return [{
+        pattern: /badge\-/
+    }];
+};

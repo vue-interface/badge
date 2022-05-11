@@ -76,7 +76,7 @@ export default {
         },
 
         variantClass() {
-            return `bg-${this.variant} text-${['muted', 'light', 'white'].indexOf(this.variant) > -1 ? 'dark' : 'white'}`;
+            return `bg-${this.variant}`;
         },
 
         classes() {
