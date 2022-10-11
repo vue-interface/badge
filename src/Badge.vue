@@ -9,7 +9,7 @@
     </component>
 </template>
 
-<script>
+<script lang="ts">
 import { Variant } from '@vue-interface/variant';
 
 export default {
@@ -63,6 +63,19 @@ export default {
 
     computed: {
 
+        /**
+         * Get the button classes.
+         * 
+         * @property {string}
+         */
+         classes(): Array<string> {
+            return [
+                'badge-pill',
+                'badge-secondary',
+                this.variantClass
+            ];
+        },
+
         type() {
             if(this.to) {
                 return 'router-link';
@@ -78,14 +91,6 @@ export default {
         variantClass() {
             return `bg-${this.variant}`;
         },
-
-        classes() {
-            return {
-                'badge-pill': this.pill,
-                'badge-secondary': this.secondary,
-                [this.variantClass]: !!this.variant,
-            };
-        }
     }
 };
 </script>

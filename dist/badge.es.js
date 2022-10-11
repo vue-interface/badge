@@ -1,4 +1,4 @@
-import { openBlock as s, createBlock as o, resolveDynamicComponent as c, normalizeClass as l, withCtx as f, renderSlot as h } from "vue";
+import { openBlock as s, createBlock as o, resolveDynamicComponent as c, normalizeClass as f, withCtx as l, renderSlot as h } from "vue";
 const p = {
   props: {
     componentPrefix: String,
@@ -18,11 +18,6 @@ const p = {
       return this.variant ? !this.variantClassPrefix || this.hasVariantPrefix ? this.variant : `${this.variantClassPrefix}-${this.variant}` : "";
     }
   }
-}, v = (r, a) => {
-  const t = r.__vccOpts || r;
-  for (const [e, i] of a)
-    t[e] = i;
-  return t;
 }, u = {
   name: "Badge",
   mixins: [
@@ -39,28 +34,33 @@ const p = {
     }
   },
   computed: {
+    classes() {
+      return [
+        "badge-pill",
+        "badge-secondary",
+        this.variantClass
+      ];
+    },
     type() {
       return this.to ? "router-link" : this.href ? "a" : "span";
     },
     variantClass() {
       return `bg-${this.variant}`;
-    },
-    classes() {
-      return {
-        "badge-pill": this.pill,
-        "badge-secondary": this.secondary,
-        [this.variantClass]: !!this.variant
-      };
     }
   }
+}, v = (r, a) => {
+  const t = r.__vccOpts || r;
+  for (const [e, n] of a)
+    t[e] = n;
+  return t;
 };
-function m(r, a, t, e, i, n) {
-  return s(), o(c(t.component || n.type), {
+function m(r, a, t, e, n, i) {
+  return s(), o(c(t.component || i.type), {
     href: t.href,
     to: t.to,
-    class: l(["badge", n.classes])
+    class: f(["badge", i.classes])
   }, {
-    default: f(() => [
+    default: l(() => [
       h(r.$slots, "default")
     ]),
     _: 3
